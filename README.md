@@ -18,10 +18,11 @@ Test Cases:
 # Тест случаи според Multiple Condition критериумот
 Можни тест случаи: 2^3 со оглед на тоа што имаме три conditions (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10).
 1: F F F (Не се извршува if blockot)
-2: Т F F 
-3: F T F
-4: F F T
-5: T T F
+2: Т F F (Првиот condition е точен, влага во ifot)
+3: F T F (Вториот condition e точен, влага во ifot)
+4: F F T (Третиот condition e точен, влага во ifot)
+5: T T F 
 6: T F T
 7: F T T
 8: T T T
+За од 5-8 откога барем еден од conditionsot се точни, одма влага во ifot бидејќи имаме само || оператори.
